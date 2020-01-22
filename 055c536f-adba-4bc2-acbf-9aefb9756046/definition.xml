@@ -100,6 +100,7 @@
       <cardaction menu="Flip Card" shortcut="ctrl+F" execute="revealHide" />
       <cardaction menu="Ready/Exhaust Card" execute="readyExhaust" showIf="exhaustable"/>
       <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
+      <cardaction menu="Anchor (toggle)" shortcut="ALT+Q" execute="anchor"/>
       <cardactions menu="Markers">
         <cardaction menu="Add marker" execute="addMarker" shortcut="Up"/>
         <cardaction menu="Add 3 markers" execute="add3Marker"/>
@@ -114,8 +115,8 @@
         <cardaction menu="Add 1 Acceleration" execute="addAcceleration" showIf="isScheme"/>
         <cardaction menu="Remove 1 Acceleration" execute="removeAcceleration" showIf="isScheme"/>
         <cardaction menu="Clear all Acceleration" execute="clearAcceleration" showIf="isScheme"/>
-        <cardaction menu="Add 1 All Purpose Marker" execute="addAPCounter"/>
-        <cardaction menu="Remove 1 All Purpose Marker" execute="removeAPCounter"/>
+        <cardaction menu="Add 1 All Purpose Marker" shortcut="RIGHT" execute="addAPCounter"/>
+        <cardaction menu="Remove 1 All Purpose Marker" shortcut="LEFT" execute="removeAPCounter"/>
         <cardaction menu="Clear all All Purpose Markers" execute="clearAPCounter"/>
       </cardactions>
       <cardaction menu="Stun (toggle)" shortcut="ALT+Z" execute="stun" showIf="isAttackable" />

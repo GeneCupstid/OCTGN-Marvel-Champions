@@ -447,6 +447,13 @@ def removeTough(card, x = 0, y = 0):
     card.markers[ToughMarker] = 0
     notify("{} is no longer tough.".format(card))
 
+def anchor(card, x = 0, y = 0):
+    mute()
+    if card.anchor:
+        card.anchor = False
+    else:
+        card.anchor = True
+
 def readyExhaust(card, x = 0, y = 0):
     mute()
     if card.orientation == Rot0:
