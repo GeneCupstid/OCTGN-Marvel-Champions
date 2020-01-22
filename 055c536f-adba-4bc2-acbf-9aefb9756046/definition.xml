@@ -118,12 +118,9 @@
         <cardaction menu="Remove 1 All Purpose Marker" execute="removeAPCounter"/>
         <cardaction menu="Clear all All Purpose Markers" execute="clearAPCounter"/>
       </cardactions>
-      <cardaction menu="Add Stun" execute="stun" showIf="isAttackable"/>
-      <cardaction menu="Add Confuse" execute="confuse" showIf="isAttackable"/>
-      <cardaction menu="Add Tough" execute="tough" showIf="isAttackable"/>
-      <cardaction menu="Remove Stun" execute="removeStun" showIf="isAttackable"/>
-      <cardaction menu="Remove Confuse" execute="removeConfuse" showIf="isAttackable"/>
-      <cardaction menu="Remove Tough" execute="removeTough" showIf="isAttackable"/>
+      <cardaction menu="Stun (toggle)" shortcut="ALT+Z" execute="stun" showIf="isAttackable" />
+      <cardaction menu="Confuse (toggle)" shortcut="ALT+C" execute="confuse" showIf="isAttackable"/>
+      <cardaction menu="Tough (toggle)" shortcut="ALT+X" execute="tough" showIf="isAttackable"/>
       <groupaction menu="Pull boost/encounter card" shortcut="alt+enter" execute="villainBoost"/>
       <groupaction menu="Ready All Cards" shortcut="ctrl+Q" execute="readyAll"/>
       <groupaction menu="Load Villain" shortcut="ctrl+V" execute="loadVillain"/>
@@ -156,6 +153,8 @@
           <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
           <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
           <groupaction menu="Draw Many" shortcut="CTRL+SHIFT+D" execute="drawMany"/>
+          <groupaction menu="View Deck" shortcut="ALT+A" execute="viewGroup"/>
+          <groupaction menu="Look At..." shortcut="ALT+T" execute="viewXGroup" />
         </group>
       <group name="Discard Pile" visibility="all" icon="symbols/dead.png" shortcut="del">
           <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>

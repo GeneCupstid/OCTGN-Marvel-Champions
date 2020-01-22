@@ -408,7 +408,8 @@ def clearAPCounter(card, x = 0, y = 0):
 def stun(card, x = 0, y = 0):
     mute()
     if card.markers[StunnedMarker] == 1:
-        notify("{} is already stunned.".format(card))
+        card.markers[StunnedMarker] = 0
+        notify("{} is no longer stunned.".format(card))
     else:
         card.markers[StunnedMarker] = 1
         notify("{} is stunned.".format(card))
@@ -416,7 +417,8 @@ def stun(card, x = 0, y = 0):
 def confuse(card, x = 0, y = 0):
     mute()
     if card.markers[ConfusedMarker] == 1:
-        notify("{} is already confused.".format(card))
+        card.markers[ConfusedMarker] = 0
+        notify("{} is no longer confused.".format(card))
     else:
         card.markers[ConfusedMarker] = 1
         notify("{} is confused.".format(card))
@@ -424,7 +426,8 @@ def confuse(card, x = 0, y = 0):
 def tough(card, x = 0, y = 0):
     mute()
     if card.markers[ToughMarker] == 1:
-        notify("{} already has a tough marker.".format(card))
+        card.markers[ToughMarker] = 0
+        notify("{} is no longer tough.".format(card))
     else:
         card.markers[ToughMarker] = 1
         notify("{} gains a tough marker.".format(card))
@@ -572,6 +575,10 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
 
 def viewGroup(group, x = 0, y = 0):
     group.lookAt(-1)
+
+def viewXGroup(group, x = 0, y = 0):
+    viewNum = askInteger("Look at how many cards?", 3)
+    group.lookAt(viewNum)
 
 def pluralize(num):
    if num == 1:
